@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-risk-low: #22c55e;
+  --color-risk-medium: #eab308;
+  --color-risk-high: #f97316;
+  --color-risk-critical: #ef4444;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e2e8f0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1040 50%, #0a0a0f 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgba(30, 30, 60, 0.6), rgba(20, 20, 40, 0.8));
+  border: 1px solid rgba(100, 100, 200, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Risk level colors */
+.text-risk-low { color: var(--color-risk-low); }
+.text-risk-medium { color: var(--color-risk-medium); }
+.text-risk-high { color: var(--color-risk-high); }
+.text-risk-critical { color: var(--color-risk-critical); }
+
+.bg-risk-low { background: var(--color-risk-low); }
+.bg-risk-medium { background: var(--color-risk-medium); }
+.bg-risk-high { background: var(--color-risk-high); }
+.bg-risk-critical { background: var(--color-risk-critical); }
+
+/* Radar chart animation */
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.radar-loading {
+  animation: radar-spin 3s linear infinite;
+}
+
+/* Pulse glow */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+}
+
+.glow-danger {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 200, 0.3);
+  border-radius: 3px;
+}
+
+/* Entrance animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease both;
+}

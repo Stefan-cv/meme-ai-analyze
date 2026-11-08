@@ -1,0 +1,48 @@
+Name: meme-ai-analyze-api
+Host: 0.0.0.0
+Port: 8080
+Timeout: 30000
+MaxBytes: 1048576
+
+CorsAllowedOrigins:
+  - http://localhost:3000
+  - http://127.0.0.1:3000
+
+Log:
+  ServiceName: meme-ai-analyze-api
+  Mode: console
+  Level: info
+  Encoding: plain
+
+Postgres:
+  Host: localhost
+  Port: 5432
+  User: memeai
+  Password: memeai_dev
+  Database: meme_ai_analyze
+  MaxConns: 50
+  MinConns: 10
+
+Redis:
+  Host: localhost
+  Port: 6379
+  Password: ""
+  DB: 0
+
+BSC:
+  RPCUrl: https://bsc.publicnode.com
+  ChainID: 56
+  BackupRPCUrl: https://1rpc.io/bnb
+
+AI:
+  Provider: openai
+  APIKey: ""
+  Model: gpt-4o
+
+Oracle:
+  ContractAddress: "0x0000000000000000000000000000000000000000"
+  PrivateKey: ""
+
+BscScan:
+  APIKey: ""  # bscscan.com 申请，免费
+  BaseURL: https://api.bscscan.com/api

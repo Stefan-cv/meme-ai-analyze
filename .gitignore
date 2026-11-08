@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+apps/api/bin/
+web/.next/
+web/out/
+web/dist/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+apps/api/tmp/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+contracts/lib/
+
+# Database
+*.sqlite
+*.db
+
+# Logs
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Coverage
+coverage/
+*.coverprofile
+
+# AI / API Keys
+*.pem
+*.key
+
+# 敏感配置（复制 example 后填写）
+.env
+apps/api/etc/api.yaml
+
+# Foundry 产物
+contracts/lib/
+contracts/cache/
+contracts/out/
+contracts/broadcast/
